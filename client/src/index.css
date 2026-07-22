@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+html.dark {
+  --color-base: #0a0f14;
+  --color-base-raised: #0f161d;
+  --color-base-border: rgba(255, 255, 255, 0.08);
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-hover: rgba(255, 255, 255, 0.07);
+  --color-ink-primary: #e6edf3;
+  --color-ink-muted: #8b98a5;
+  --color-ink-faint: #5b6773;
+}
+
+html.light {
+  --color-base: #eef2f4;
+  --color-base-raised: #ffffff;
+  --color-base-border: rgba(15, 23, 30, 0.09);
+  --color-surface: rgba(15, 23, 30, 0.03);
+  --color-surface-hover: rgba(15, 23, 30, 0.06);
+  --color-ink-primary: #101820;
+  --color-ink-muted: #4c5964;
+  --color-ink-faint: #8b98a5;
+}
+
+* {
+  border-color: var(--color-base-border);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-ink-primary);
+  font-family: "Inter", sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.font-display {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.glass-panel {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-base-border);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset, 0 12px 32px -16px rgba(0, 0, 0, 0.55);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-base-border);
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
