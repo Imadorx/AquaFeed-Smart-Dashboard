@@ -127,7 +127,7 @@ export function SettingsPage() {
               </p>
               <Button variant="primary" onClick={handleSave} disabled={saving}>
                 <Save size={14} />
-                {saving ? "Saving..." : "Save to MongoDB"}
+                {saving ? "Saving..." : "Save changes"}
               </Button>
             </div>
           </GlassCard>

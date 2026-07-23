@@ -44,9 +44,9 @@ export function Sidebar() {
       </nav>
 
       <div className="rounded-xl border border-base-border bg-surface px-3 py-3 text-[11px] leading-relaxed text-ink-faint">
-        Unit 04 — Solar Hydroponic Bay
+        Unit 01 — AquaFeed 
         <br />
-        Casablanca Research Farm
+        Smart Systems
       </div>
     </aside>
   );
